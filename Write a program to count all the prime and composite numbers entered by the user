@@ -1,0 +1,42 @@
+ import java.util.*;
+import java.io.*;
+public class prime
+{
+	public static void main(String[] args) {
+	    Scanner dis=new Scanner(System.in);
+        String line;
+        String[] arr;
+        int found;
+        int num;
+        int c=0;
+        int p=0;
+
+        line = dis.nextLine();
+        arr = line.split(",");
+        for(int i=0;i<arr.length;i++)
+        {
+            found=0;
+            num=Integer.parseInt(arr[i]);
+            for(int j=2;j<num;j++)
+            {
+                if(num%j==0)
+                {
+                    c+=1;
+                    found=1;
+                    break;
+                }
+            }
+            if(found==0)
+            {
+                p+=1;
+                
+            }
+            
+        }
+        System.out.println("Composite number:"+c);
+         System.out.println("Prime number:"+p);
+        
+          
+  
+	}
+}
